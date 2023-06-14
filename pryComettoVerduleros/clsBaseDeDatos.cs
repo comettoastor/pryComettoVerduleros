@@ -58,9 +58,14 @@ namespace pryComettoVerduleros
 
                 Lector = Comando.ExecuteReader();
 
-                while (Lector.Read())
+                if (Lector.HasRows)
                 {
-                    cmbVendedores.Items.Add(Lector[0] + "," + Lector[1]);
+                    DataTable DataTable = new DataTable();
+                    DataTable.Load(Lector);
+
+                    cmbVendedores.DataSource = DataTable;
+                    cmbVendedores.ValueMember = "IdVendedor";
+                    cmbVendedores.DisplayMember = "NombreVendedor";
                 }
 
                 Comando.Connection.Close();
@@ -84,16 +89,21 @@ namespace pryComettoVerduleros
 
                 Lector = Comando.ExecuteReader();
 
-                while (Lector.Read())
+                if (Lector.HasRows)
                 {
-                    cmbProductos.Items.Add(Lector[1]);
-                }
+                    DataTable DataTable = new DataTable();
+                    DataTable.Load(Lector);
 
+                    cmbProductos.DataSource = DataTable;
+                    cmbProductos.ValueMember = "IdProducto";
+                    cmbProductos.DisplayMember = "NomProducto";
+                }
+             
                 Comando.Connection.Close();
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show(error.Message + "Cargar Productos");
             }
         }
 

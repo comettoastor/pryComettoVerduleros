@@ -32,22 +32,26 @@
             this.cmbVendedor = new System.Windows.Forms.ComboBox();
             this.cmbProducto = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtKilos = new System.Windows.Forms.TextBox();
             this.lblVendedor = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblKilos = new System.Windows.Forms.Label();
             this.mrcVenta = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.numKilos = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.mrcVenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numKilos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvVentas
             // 
+            this.dgvVentas.AllowUserToAddRows = false;
+            this.dgvVentas.AllowUserToDeleteRows = false;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Location = new System.Drawing.Point(12, 133);
             this.dgvVentas.Name = "dgvVentas";
+            this.dgvVentas.ReadOnly = true;
             this.dgvVentas.Size = new System.Drawing.Size(379, 239);
             this.dgvVentas.TabIndex = 0;
             // 
@@ -76,13 +80,6 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(86, 20);
             this.dtpFecha.TabIndex = 3;
-            // 
-            // txtKilos
-            // 
-            this.txtKilos.Location = new System.Drawing.Point(248, 50);
-            this.txtKilos.Name = "txtKilos";
-            this.txtKilos.Size = new System.Drawing.Size(75, 20);
-            this.txtKilos.TabIndex = 4;
             // 
             // lblVendedor
             // 
@@ -122,6 +119,7 @@
             // 
             // mrcVenta
             // 
+            this.mrcVenta.Controls.Add(this.numKilos);
             this.mrcVenta.Controls.Add(this.btnGuardar);
             this.mrcVenta.Controls.Add(this.lblVendedor);
             this.mrcVenta.Controls.Add(this.lblKilos);
@@ -130,7 +128,6 @@
             this.mrcVenta.Controls.Add(this.cmbProducto);
             this.mrcVenta.Controls.Add(this.lblProducto);
             this.mrcVenta.Controls.Add(this.dtpFecha);
-            this.mrcVenta.Controls.Add(this.txtKilos);
             this.mrcVenta.Location = new System.Drawing.Point(12, 12);
             this.mrcVenta.Name = "mrcVenta";
             this.mrcVenta.Size = new System.Drawing.Size(379, 115);
@@ -148,6 +145,18 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // numKilos
+            // 
+            this.numKilos.Location = new System.Drawing.Point(248, 50);
+            this.numKilos.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numKilos.Name = "numKilos";
+            this.numKilos.Size = new System.Drawing.Size(62, 20);
+            this.numKilos.TabIndex = 10;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,6 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.mrcVenta.ResumeLayout(false);
             this.mrcVenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numKilos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,13 +182,13 @@
         private System.Windows.Forms.ComboBox cmbVendedor;
         private System.Windows.Forms.ComboBox cmbProducto;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox txtKilos;
         private System.Windows.Forms.Label lblVendedor;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblKilos;
         private System.Windows.Forms.GroupBox mrcVenta;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.NumericUpDown numKilos;
     }
 }
 

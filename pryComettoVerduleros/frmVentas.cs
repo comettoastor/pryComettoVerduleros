@@ -31,7 +31,7 @@ namespace pryComettoVerduleros
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             clsBaseDeDatos clsBaseDeDatos = new clsBaseDeDatos();
-            clsBaseDeDatos.GrabarVentas(Conexion, "Ventas", int.Parse(cmbVendedor.Text.Split(',')[0]), cmbProducto.SelectedIndex + 1, dtpFecha.Value, int.Parse(txtKilos.Text));
+            clsBaseDeDatos.GrabarVentas(Conexion, "Ventas", Convert.ToInt32(cmbVendedor.SelectedValue), Convert.ToInt32(cmbProducto.SelectedValue), dtpFecha.Value, Convert.ToInt32(numKilos.Value));
             clsBaseDeDatos.CargarTabla(Conexion, "Ventas", dgvVentas);
         }
     }
