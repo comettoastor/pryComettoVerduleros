@@ -127,6 +127,8 @@ namespace pryComettoVerduleros
 
                     Comando.Connection.Close();
                 }
+
+                MessageBox.Show("Venta ingresada correctamente!","Venta ingresada",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (Exception error)
             {
