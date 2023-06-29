@@ -103,7 +103,7 @@ namespace pryComettoVerduleros
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.Message + "Cargar Productos");
+                MessageBox.Show(error.Message);
             }
         }
 
@@ -132,7 +132,7 @@ namespace pryComettoVerduleros
             }
             catch (Exception error)
             {
-                MessageBox.Show(error.Message + error.Data + error.Source);
+                MessageBox.Show(error.Message);
             }
         }
     }

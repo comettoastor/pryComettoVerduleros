@@ -61,6 +61,16 @@ namespace pryComettoVerduleros.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon icono_verduleria {
+            get {
+                object obj = ResourceManager.GetObject("icono_verduleria", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
         internal static byte[] VERDULEROS {

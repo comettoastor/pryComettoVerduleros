@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.cmbVendedor = new System.Windows.Forms.ComboBox();
             this.cmbProducto = new System.Windows.Forms.ComboBox();
@@ -37,8 +38,8 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblKilos = new System.Windows.Forms.Label();
             this.mrcVenta = new System.Windows.Forms.GroupBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.numKilos = new System.Windows.Forms.NumericUpDown();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.mrcVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numKilos)).BeginInit();
@@ -133,17 +134,7 @@
             this.mrcVenta.Size = new System.Drawing.Size(379, 115);
             this.mrcVenta.TabIndex = 9;
             this.mrcVenta.TabStop = false;
-            this.mrcVenta.Text = "Venta";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(298, 86);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 9;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.mrcVenta.Text = "Registrar Venta";
             // 
             // numKilos
             // 
@@ -157,6 +148,16 @@
             this.numKilos.Size = new System.Drawing.Size(62, 20);
             this.numKilos.TabIndex = 10;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(298, 86);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +165,7 @@
             this.ClientSize = new System.Drawing.Size(402, 383);
             this.Controls.Add(this.mrcVenta);
             this.Controls.Add(this.dgvVentas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas - Verdulería";
